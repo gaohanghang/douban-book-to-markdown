@@ -171,7 +171,7 @@ public class CrawlerDoubanUtils {
     public static void main(String[] args) {
         //String url = getSearchUrl("明朝那些事");
 
-        String url = "https://book.douban.com/subject/34441728/";
+        String url = "https://book.douban.com/subject/30259509/";
         Document doc = getDom(url);
         //System.out.println(getBookItemUrl(doc,0));
 
@@ -186,7 +186,7 @@ public class CrawlerDoubanUtils {
         // 作者
         String bookAuhor = getBookAuhor(doc);
 
-        System.out.println("## 书名:《" + bookName + "》");
+        System.out.println("### 《" + bookName + "》");
         System.out.println();
         System.out.println("> 作者: " + bookAuhor);
         System.out.println(">");
