@@ -8,7 +8,7 @@
 
 接口调用示例
 ```http request
-http://152.136.101.97:8080/douban?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F27056391%2F
+http://152.136.101.97:8080/douban?url=https://book.douban.com/subject/27056391/
 ```
 
 ## 效果图
