@@ -28,7 +28,7 @@ public class CrawlerDoubanUtils {
     public static Document getDom(String url) {
         try {
             //获取页面元素dom  其中.get()为发起get请求
-            Document doc = Jsoup.connect(url).get();
+            Document doc = Jsoup.connect(url).userAgent("user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36").get();
             return doc;
         } catch (Exception e) {
             e.printStackTrace();

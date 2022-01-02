@@ -14,10 +14,6 @@
     <name>douban-book-to-markdown</name>
     <description>输入豆瓣读书链接输出markdown文档</description>
 
-    <properties>
-        <java.version>11</java.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
