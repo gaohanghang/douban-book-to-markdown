@@ -6,6 +6,11 @@
 
 ![](https://tva1.sinaimg.cn/large/008i3skNly1gxzn24qijbj31oz0u0n0g.jpg)
 
+接口调用示例
+```http request
+http://152.136.101.97:8080/douban?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F27056391%2F
+```
+
 ## 效果图
 
 ![](https://raw.githubusercontent.com/gaohanghang/images/master/img/20190926011417.png)
