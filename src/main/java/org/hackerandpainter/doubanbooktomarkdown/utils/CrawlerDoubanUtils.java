@@ -171,7 +171,8 @@ public class CrawlerDoubanUtils {
     public static void main(String[] args) {
         //String url = getSearchUrl("明朝那些事");
 
-        String url = "https://book.douban.com/subject/30259509/";
+        //String url = "https://book.douban.com/subject/30259509/";
+        String url = "https://book.douban.com/subject/27056391/";
         Document doc = getDom(url);
         //System.out.println(getBookItemUrl(doc,0));
 
@@ -196,5 +197,35 @@ public class CrawlerDoubanUtils {
         System.out.println("![](" + bookCoverImg + ")");
         System.out.println();
         System.out.println("评分: **" + doubanScore + "**");
+    }
+
+    public String getInfo(String url) {
+        //String url = getSearchUrl("明朝那些事");
+        //String url = "https://book.douban.com/subject/27056391/";
+
+        Document doc = getDom(url);
+
+        // 书名
+        String bookName = getBookName(doc);
+        // 介绍
+        String bookIntroduction = getBookIntroduction(doc);
+        // 评分
+        String doubanScore = getDoubanScore(doc);
+        // 封面图
+        String bookCoverImg = getBookCoverImg(doc);
+        // 作者
+        String bookAuhor = getBookAuhor(doc);
+
+        String stringBuilder = "### 《" + bookName + "》\r\n" +
+                "\r\n" +
+                "> 作者: " + bookAuhor + "\r\n" +
+                ">" + "\r\n" +
+                "> 介绍: \n>\n" + "> " + bookIntroduction + "\r\n" +
+                ">\n> 豆瓣链接: \n" + "> " + url + "\r\n" +
+                "\r\n" +
+                "![](" + bookCoverImg + ")" + "\r\n" +
+                "\r\n" +
+                "评分: **" + doubanScore + "**";
+        return stringBuilder;
     }
 }

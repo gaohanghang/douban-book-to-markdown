@@ -1,7 +1,7 @@
-tomcat:
-  remote-ip-header: x-forward-for
-  uri-encoding: UTF-8
-  max-threads: 10
-  background-processor-delay: 30
-  basedir: ${user.home}/tomcat/
+server:
+  port: 8080
+
+# Spring
 spring:
+  profiles:
+    active: dev
