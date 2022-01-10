@@ -216,16 +216,17 @@ public class CrawlerDoubanUtils {
         // 作者
         String bookAuhor = getBookAuhor(doc);
 
-        String stringBuilder = "### 《" + bookName + "》\r\n" +
-                "\r\n" +
-                "> 作者: " + bookAuhor + "\r\n" +
-                ">" + "\r\n" +
-                "> 介绍: \n>\n" + "> " + bookIntroduction + "\r\n" +
-                ">\n> 豆瓣链接: \n" + "> " + url + "\r\n" +
-                "\r\n" +
-                "![](" + bookCoverImg + ")" + "\r\n" +
-                "\r\n" +
-                "评分: **" + doubanScore + "**";
-        return stringBuilder;
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("### 《" + bookName + "》\r\n");
+        stringBuilder.append("\r\n");
+        stringBuilder.append("> 作者: " + bookAuhor + "\n");
+        stringBuilder.append(">\n");
+        stringBuilder.append("> 介绍: \n>\n" + "> " + bookIntroduction + "\n");
+        stringBuilder.append(">\n> 豆瓣链接: \n" + "> " + url + "\n");
+        stringBuilder.append("\r\n");
+        stringBuilder.append("![](" + bookCoverImg + ")" + "\n");
+        stringBuilder.append("\r\n");
+        stringBuilder.append("评分: **" + doubanScore + "**" + "\n");
+        return stringBuilder.toString();
     }
 }
