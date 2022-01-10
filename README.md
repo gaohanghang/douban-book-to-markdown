@@ -22,3 +22,10 @@ http://152.136.101.97:8080/douban?url=https://book.douban.com/subject/27056391/
 ## 参考文章
 
 https://blog.csdn.net/Deng872347348/article/details/114636752
+
+
+项目启动
+
+```http request
+nohup java -jar xxx.jar &
+```

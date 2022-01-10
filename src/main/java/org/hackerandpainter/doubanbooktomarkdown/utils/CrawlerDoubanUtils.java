@@ -216,17 +216,20 @@ public class CrawlerDoubanUtils {
         // 作者
         String bookAuhor = getBookAuhor(doc);
 
+        String newLine = System.getProperty("line.separator");
+
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("### 《" + bookName + "》\r\n");
-        stringBuilder.append("\r\n");
-        stringBuilder.append("> 作者: " + bookAuhor + "\n");
-        stringBuilder.append(">\n");
-        stringBuilder.append("> 介绍: \n>\n" + "> " + bookIntroduction + "\n");
-        stringBuilder.append(">\n> 豆瓣链接: \n" + "> " + url + "\n");
-        stringBuilder.append("\r\n");
-        stringBuilder.append("![](" + bookCoverImg + ")" + "\n");
-        stringBuilder.append("\r\n");
-        stringBuilder.append("评分: **" + doubanScore + "**" + "\n");
+        stringBuilder.append("### 《").append(bookName).append("》\r\n");
+        stringBuilder.append(newLine);
+        stringBuilder.append("> 作者: ").append(bookAuhor).append("\n");
+        stringBuilder.append(">");
+        stringBuilder.append(newLine);
+        stringBuilder.append("> 介绍: \n>\n" + "> ").append(bookIntroduction).append("\n");
+        stringBuilder.append(">\n> 豆瓣链接: \n" + "> ").append(url).append("\n");
+        stringBuilder.append(newLine);
+        stringBuilder.append("![](").append(bookCoverImg).append(")").append("\n");
+        stringBuilder.append(newLine);
+        stringBuilder.append("评分: **").append(doubanScore).append("**").append("\n");
         return stringBuilder.toString();
     }
 }
